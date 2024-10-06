@@ -1,132 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 6: Tables</title>
+  <title>M02 HTML Table Example</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, M02 Assignment DEV109">
+  <meta name="author" content="Rob Taylor">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table { width: 100%; border-collapse: collapse; }
+    table, th, td { border: 2px solid black; }
+    th, td { padding: 5px; }
+  </style>
 </head>
-<body>
-    <h1>Chapter 6: Tables</h1>
+  <body>
+    <table>
+      <tr>
+          <td colspan="3"><h1 style="text-align: center;">HTML Table Example</h1></td>
+      </tr>
+      <tr>
+          <td><img src="https://greenhealthycooking.com/wp-content/uploads/2022/11/German-Apple-Cake.jpg" width="250" alt="Versunkener Apfelkuchen" title="German Apple Tart" ></td>
+          <td><h2>Meal Planner</h2></td>
+          <td><h2>Recipe Index #: 1</h2></td>
+      </tr>
+      <tr>
+          <th>Week Starting</th>
+          <th>2/15/2018</th>
+          <th>Instructions</th>
+      </tr>
+      <tr>
+          <td><b>Day of the Week</b></td>
+          <td><b>Recipe Name</b></td>
+          <td rowspan="8">
+            <br>* Peel one apple at a time, cut in half, core, then lay flat side down and make many slits into the apple without cutting all the way down. Then cut the apple half in half. That way you end up with apple quarters with slits all over. Use a half lemon and lightly coat with lemon juice to avoid browning. Set aside.
+            <br>* Cream softened butter, sugar, and zest of lemon with the paddle attachment of your stand mixer. 
+            <br>* Add vanilla extract and eggs one egg at a time, making sure each egg is incorporated into the creamed butter before adding the next. Mix on low, do not beat the eggs.
+            <br>* Place a sieve over the mixing bowl and add flour, baking powder, and sea salt to the sieve and sift into the bowl.
+            <br>* Mix on low until JUST incorporated, then add the batter to your buttered and parchment-paper-lined cake pan. Use a spatula to distribute evenly and flatten.
+            <br>* Place apple quarters on top without pushing into the batter. Sprinkle a little raw sugar on the apples.
+            <br>* Bake for 35-40 minutes or until baked through and golden at 350F (180C).
+          </td>
+      </tr>
+      <tr>
+          <td>Monday</td>
+          <td>German Apple Tart (Versunkener Apfelkuchen)</td>
+      </tr>
+      <tr>
+          <td>Tuesday</td>
+          <td>Tallarín Verde (Peruvian Pasta Pesto)</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Pan-Seared Salmon Recipe (Easy, Simple & Healthy)</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>Agua de Horchata</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Albóndigas (Mexican Meatballs)</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>Mauritian Chicken Curry</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>Spinach Feta Pizza</td>
+      </tr>
+   </table>
 
-    <table border="1" width="300">
-        <tr>
-            <th>Table 1</th>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-        </tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
-        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
-    </table>
-
-    <table border="1" width="300">
-        <tr>
-            <th>Table 2</th>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-        </tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
-        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
-    </table>
-
-    <table border="1" width="300">
-        <tr>
-            <th>Table 3</th>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-        </tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
-        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
-    </table>
-
-    <table border="1" width="300">
-        <tr>
-            <th>Table 4</th>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-        </tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
-        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
-    </table>
-
-    <table border="1" width="300">
-        <tr>
-            <th>Table 5</th>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-        </tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
-        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
-    </table>
-
-    <table border="1" width="300">
-        <tr>
-            <th>Table 6</th>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-        </tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
-        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
-    </table>
-
-    <table border="1" width="300">
-        <tr>
-            <th>Table 7</th>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-        </tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
-        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
-    </table>
-
-    <table border="1" width="300">
-        <tr>
-            <th>Table 8</th>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-        </tr>
-        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
-        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
-    </table>
-</body>
-</html>
-
+		<!-- rt.rt Don't know about this, but leaving it here. -->
+		<p><a href="http://validator.w3.org/check?uri=referer" target="_blank"><img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5" title="HTML5"></a></p>
+  </body>
+</html> 

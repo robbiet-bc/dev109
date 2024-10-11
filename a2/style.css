@@ -1,0 +1,95 @@
+/* <!-- Rob Taylor style.css file --> */
+
+/* ATTRIBUTE OVERRIDES */
+body {
+  background-color: lightyellow; /* rt.rt also works for header & footer */
+  background-image: url('images/chess-background.jpg');
+  background-size: 100%; /* Ensures the background covers the entire section */
+  background-repeat: no-repeat; /* only one image */
+}
+
+h1 {
+    font-family: 'RomanicumRegular';
+    font-weight: normal;
+    font-style: normal;
+    /* font-size: 36px; */
+    font-size: 300%;
+}
+
+/* CLASS DEFINITIONS */
+.black{
+  border: 1px solid black;
+  width: 10%;
+  height: 60px;
+  background-color:#787878;
+  float:left;
+}
+
+/* The following style has an error. Do you know why?  */
+/* rt.rt nope. I had to ask. so #clear applies to ID   */
+/* while .clear applies to class. Not gonna lie, when  */
+/* the book said they were the same, I didn't see this */
+/* I had to go to the web to figure this out. HOURS!!! */
+.clear {
+  clear:both;
+}
+
+.cp { 
+/* I wanted the chess pieces (cp) to be 30% in rather than fixed so it didn't lock it down. */
+/* However, when this was img - it impacted the images in the footer, which i didn't want.  */
+/* So I changed this to use for each chess piece.                                           */
+margin-left: 30%;
+margin-top:  10%;
+}  
+
+.row{
+  position:relative;
+  margin-left:10%;
+  margin-right:10%;
+}
+  
+.white{
+  border: 1px solid black;
+  width: 10%;
+  height: 60px;
+  background-color:white;
+  float:left;
+}
+
+/* ID Definitions */
+#chessboard-container {
+  width:auto;
+  margin-top: 10%;
+  margin-bottom:5%;
+  margin-left: 15%;
+  margin-right: auto;
+  display: block;
+  
+}
+
+#footer {
+  border:solid 1px;
+  padding: 10px;
+  margin:10px;
+  text-align: center;
+}
+
+#header {
+  padding: 10px;
+}
+
+#title {
+  position:fixed;
+  top:0px;
+  left:0px; 
+  padding:10px;
+  margin:0px;
+  width:97%;
+  background-color:lightyellow;
+  text-align:center; 
+  z-index:10;
+  border:solid 1px;
+  border-color: black;
+}
+
+

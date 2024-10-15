@@ -1,4 +1,5 @@
 /* <!-- Rob Taylor style.css file --> */
+/* rt.01 Added background attribut to #footer with opacity */
 
 /* ATTRIBUTE OVERRIDES */
 body {
@@ -68,6 +69,8 @@ margin-top:  10%;
 }
 
 #footer {
+  background-color:#c26743;   /* rt.01 Added background */
+  opacity: 85%;               /* rt.01 Also Opacity so you can still see the bk-img */
   border:solid 1px;
   padding: 10px;
   margin:10px;

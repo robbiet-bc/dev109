@@ -1,0 +1,83 @@
+/* <!-- Rob Taylor style.css file --> */
+/* OK - so the main lesson in this exercise is that order matters. As in,
+ * if I put the .columnX definitions before the #feature/.article color 
+ * definition, it is overwritten. Which means, the idea of grouping Attribute, ID
+ * or Class definitions all in the same code blocks goes out the window. Which,
+ * took me to the end of the exercise - after sorting them all around - to realize */
+
+/* ATTRIBUTE OVERRIDES */
+* {
+  font-family: Arial, Verdana, sans-serif;
+  color: #665544;
+  text-align: center;
+}
+
+body {
+  width: 90%;
+  margin: 0 auto;
+  background-image: url('images/forest-green.png'); /* rt.rt */
+  background-size: 100%; /* Ensures the background covers the entire section */
+}
+
+li {
+  display: inline;
+  padding: 0.5em;
+}
+
+h1 { /* rt.rt */
+  font-family: 'FeltpenRegular'; 
+  font-size: 50px;
+  color: #1f4c38;
+}
+
+.column1, .column2, .column3 {
+  width: 31.3%;
+  float: left;
+  margin: 1%;
+}
+
+#content {
+  overflow: auto;
+}
+
+#nav, #feature, #footer {
+  margin: 1%;
+}
+
+#nav, #footer {
+  background-color: #efefef;
+  padding: 0.5em 0;
+}
+
+#nav { /* rt.rt */
+  background-color: #cef2e2;
+}
+
+#feature, .article {
+  height: 10em;
+  margin-bottom: 1em;
+  background-color: #efefef;
+}
+
+#feature { /* rt.rt */
+  background-color: #778da6;
+  background-image: url('images/lite-green.png');
+  background-size: 100%; /* Ensures the background covers the entire section */
+}
+
+.column1 { /* rt.rt */
+  background-color: #92d2b6;
+}
+  
+.column2 { /* rt.rt */
+  background-color: #78c8a5;
+}
+
+.column3 {
+  margin-right: 0%;
+  background-color: #5fbe94;  /* rt.rt */
+}
+
+#footer { /* rt.rt */
+  background-color:#9ee7c8;
+}

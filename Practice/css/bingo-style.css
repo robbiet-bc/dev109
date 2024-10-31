@@ -1,0 +1,43 @@
+h1 {
+  color: aliceblue;
+}
+
+body {
+  background-image: url('../images/party-bingo.avif');
+  background-size: cover; /* This makes the image cover the entire background */
+  background-repeat: no-repeat; /* This prevents the image from repeating */
+  background-position: center; /* This centers the image */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#bingo-card {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(6, 60px);
+  gap: 5px;
+  margin: 20px auto;
+  width: max-content;
+}
+
+.bingo-header {
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #ffe680;
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+.bingo-cell {
+  font-size: 20px;
+  background-color: #ffebcd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  position: relative;
+}
+
+.bingo-cell.marked {
+  background-color: rgba(0, 255, 183, 0.262);
+}

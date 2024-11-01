@@ -1,0 +1,54 @@
+h1, h2 {
+  color: darkblue;
+}
+
+p {
+  width: 500px; 
+  padding: 10px;
+  margin: 0 auto; 
+  text-align: center; 
+}
+
+body {
+  background-image: url('../images/geometric-grey-background.avif');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+  /* margin: 0; */
+}
+
+/* Grid container */
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;
+
+  margin: 0 auto; 
+
+  /* border-style: dashed; /* remove */
+}
+
+/* Style individual sections */
+#upLeft, #upRight, #downLeft, #downRight {
+/*  border-style: double  ; /* remove */
+}
+
+#upLeft, #downLeft {
+  text-align: right; 
+}
+
+#upRight, #downRight {
+  text-align: left; 
+
+}
+
+  #footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(211,211,211, .6)
+}

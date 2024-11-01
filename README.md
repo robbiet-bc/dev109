@@ -10,4 +10,5 @@ Bellevue College Fall 2024<br>
 <li>Module 3: <a href="https://robbiet-bc.github.io/dev109/m03/index.html" target="_blank">CSS, Cottage Garden</a></li>
 <li>Module 4: <a href="https://robbiet-bc.github.io/dev109/m04/index.html" target="_blank">Liquid layout - greens</a></li>
 <li>Module 5: <a href="https://robbiet-bc.github.io/dev109/m05/index.html" target="_blank">Bullseye Math - user input</a></li>
+<li>Artifact 3: <a href="https://robbiet-bc.github.io/dev109/a3/index.html" target="_blank">Rhombus Generator</a></li>
 </UL>

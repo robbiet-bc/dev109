@@ -1,0 +1,202 @@
+/************************************************************************/
+/* Rob Taylor, DEV 109            11/1/2024                    Midterm  */
+/************************************************************************/
+/*               Main CSS including Headers & Navigation                */
+/************************************************************************/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f2d4; 
+  color: #2c3e50; 
+}
+
+header {
+  background-color: #5a8e3e;    /* Forest green */
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo and nav */
+}
+
+h1 {
+  font-family: 'DancingScriptRegular'; 
+  font-size: 50px;
+  color: #435B9A;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.validated {
+  width: 80px; /* Adjust as needed */
+  height: auto;
+  margin-left: auto; /* Pushes validated image to the far right */
+}
+
+nav {
+  flex-grow: 1;                   /* Instead of right justified, centered, like a banner */
+  text-align: center;
+  font-family: 'DancingScriptRegular'; 
+  font-size: 25px;
+  background-color: #435B9A;
+}
+
+nav ul {
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;                /* no bullets, row */
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {               /* links on Hover! */
+  text-decoration: underline;
+  color: #162310; 
+  background-color: #9CBB8B;
+  border-radius: 4px;
+}
+
+main {                            /* Main Section */
+  padding: 20px;
+  border-radius: 8px;   
+}
+
+#content {                        /* required background image */
+  background-image: url("/MidTerm/images/soft-greens.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+/************************************************************************/
+/*                           Footer CSS                                 */
+/************************************************************************/
+footer {
+  background-color: #5a8e3e; 
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Container for footer content */
+#footer-content {
+  position: relative;
+}
+
+/* Tree image container styles */
+#tree-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+#tree-image {
+  max-width: 100px;
+  border-radius: 8px;
+}
+
+#grow-deep-text { /* I want text over the tree image. So it pops with shadow */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f9f9f9;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding-top: 5px;
+}
+
+/* Validator and copyright positioning */
+#copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+  color: #3D382D;
+}
+
+#validators {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  color: #3D382D;
+}
+
+/************************************************************************/
+/*                      Creative/Grow Deep CSS                          */
+/************************************************************************/
+.grow-deep-container {      /* arrage in 3 columns */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grow-deep-image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+#haiku {
+  font-family: 'AmburegulRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+/************************************************************************/
+/*                          Coursework CSS                              */
+/************************************************************************/
+.styled-table {
+  width: 50%;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.styled-table th, 
+.styled-table td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Header styling */
+.styled-table thead th {
+  background-color: #162310;
+  color: white;
+}
+
+/* Row colors */
+.styled-table tbody tr:nth-child(odd) {
+  background-color: #CEDDC5;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #9CBB8B;
+}
+
+/************************************************************************/
+/*                           Contact CSS                                */
+/************************************************************************/
+.content-contact {                            /* Put it all in a box */
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #9CBB8B;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* pop with shadow */
+}

@@ -1,4 +1,5 @@
 // Rob Taylor Dev 109  10/31/2024
+// rt.01 11/12/2024 - Change to alternating colors per request
 
 function createRhombus(pHeight, pColor2, pColor1, pSymbol) {
   // Set pHeight to be at least 3 and at most 30

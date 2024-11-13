@@ -1,4 +1,5 @@
 // Rob Taylor Dev 109  10/31/2024
+// rt.01 11/12/2024 - Change to alternating colors per request
 
 function createRhombus(pHeight, pColor2, pColor1, pSymbol) {
   // Set pHeight to be at least 3 and at most 30
@@ -9,6 +10,111 @@ function createRhombus(pHeight, pColor2, pColor1, pSymbol) {
   downRight(pHeight, pColor2, pColor1, pSymbol); // Draw lower Right Triangle
 
 }
+
+function upLeft(pHeight, pColor2, pColor1, pSymbol) {
+  var rLine = "";
+  var lRepeat = 2; // My thought was I might change this depending on the width of the character, but I didn't.
+  
+  for (i = 0; i < pHeight; i++) {
+    rLine += "";
+    //Create each line on the Rhombus
+    for (j = 0; j <= i; j++) {
+
+      // I modified all these to outline the rhombus rt.01 - now checkerboard
+      if (j % 2)
+        rLine += "<span style='color:" + pColor2 + ";'>" + pSymbol.repeat(lRepeat) + "</span>";
+      else
+        rLine += "<span style='color:" + pColor1 + ";'>" + pSymbol.repeat(lRepeat) + "</span>";
+
+    }
+    rLine += "<br>";
+    // console.log(rLine);
+
+  }
+
+  document.getElementById("upLeft").innerHTML = rLine;
+}
+
+function upRight(pHeight, pColor2, pColor1, pSymbol) {
+  var rLine = "";
+  var lRepeat = 2;
+
+  for (i = 0; i < pHeight; i++) {
+    rLine += "";
+    //Create each line on the Rhombus
+    for (j = 0; j <= i; j++) {
+
+      // I modified all these to outline the rhombus rt.01 - now checkerboard
+      if ((j+i) % 2) /* rt.01  To get alternating */
+        rLine += "<span style='color:" + pColor1 + ";'>" + pSymbol.repeat(lRepeat) + "</span>";
+      else
+        rLine += "<span style='color:" + pColor2 + ";'>" + pSymbol.repeat(lRepeat) + "</span>";
+
+    }
+    rLine += "<br>";
+    // console.log(rLine);
+
+  }
+
+  document.getElementById("upRight").innerHTML = rLine;
+}
+
+function downRight(pHeight, pColor2, pColor1, pSymbol) {
+  var rLine = "";
+  var lRepeat = 2;
+
+  for (i = pHeight; i > 0; i--) {
+    rLine += "";
+    //Create each line on the Rhombus
+    for (j = 0; j < i; j++) {
+
+      // I modified all these to outline the rhombus rt.01 - now checkerboard
+      if ((j+i) % 2) /* rt.01  To get alternating */
+        rLine += "<span style='color:" + pColor1 + ";'>" + pSymbol.repeat(lRepeat) + "</span>";
+      else
+        rLine += "<span style='color:" + pColor2 + ";'>" + pSymbol.repeat(lRepeat) + "</span>";
+
+    }
+    rLine += "<br>";
+    // console.log(rLine);
+
+  }
+
+  document.getElementById("downRight").innerHTML = rLine;
+}
+
+function downLeft(pSize, pColor1, pColor2, pSymbol) {
+  var rLine = "";
+  var lRepeat = 2;
+
+  for (i = pSize; i > 0; i--) {
+    rLine += "";
+    for (j = 0; j < i; j++) {
+
+      // I modified all these to outline the rhombus rt.01 - now checkerboard
+      if (j % 2)
+        rLine += "<span style='color:" + pColor2 + ";'>" + pSymbol.repeat(lRepeat) + "</span>";
+      else
+        rLine += "<span style='color:" + pColor1 + ";'>" + pSymbol.repeat(lRepeat) + "</span>";
+    }
+    rLine += "<br>";
+  }
+
+  document.getElementById("downLeft").innerHTML = rLine;
+
+}
+
+// I'm loading the first Rhombus with "#" even though I like the solid square more.
+window.onload = function() {
+  createRhombus(5, "Yellow", "Silver", "#");
+
+};
+
+/*****************************************************************************************************
+/* My Old Code from 10/31/2024 
+/* Mod per feedback: interesting way of doing it. the instructions say to alternate colors. this will 
+                     demonstrate your understanding of how the code works.
+/*****************************************************************************************************
 
 function upLeft(pHeight, pColor2, pColor1, pSymbol) {
   var rLine = "";
@@ -102,9 +208,4 @@ function downLeft(pSize, pColor1, pColor2, pSymbol) {
   document.getElementById("downLeft").innerHTML = rLine;
 
 }
-
-// I'm loading the first Rhombus with "#" 
-window.onload = function() {
-  createRhombus(5, "Yellow", "Silver", "#");
-
-};
+*****************************************************************************************************/

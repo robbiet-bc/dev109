@@ -37,6 +37,27 @@ h1 {
   margin-left: auto; /* Pushes validated image to the far right */
 }
 
+/* rt.01 add pulsing effect to highlight the Validation page */
+#highlight-image {
+  animation: pulse 1.5s 5; /* Pulse effect for the validation page */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
 nav {
   flex-grow: 1;                   /* Instead of right justified, centered, like a banner */
   text-align: center;
@@ -199,4 +220,38 @@ footer {
   background-color: #9CBB8B;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* pop with shadow */
+}
+
+
+/************************************************************************/
+/*                       Validation Page CSS                            */
+/************************************************************************/
+/* Ensure the container spans the full width and sets up a flexbox layout */
+.container {
+  display: flex; /* This will create a flexbox container */
+  justify-content: space-between; /* Space out the columns */
+  gap: 20px; /* Adds space between the columns */
+  margin-top: 20px;
+}
+
+/* Style for each column (left and right) */
+.column {
+  width: 48%; /* Each column takes up 48% of the container width */
+}
+
+/* Style for the header in each column */
+.column h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Screenshot styling */
+.screenshot {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.screenshot img {
+  max-width: 100%; /* Ensures the images are responsive */
+  height: auto;
 }

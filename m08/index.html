@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <head>
+  <!-- Rob Taylor, Dev 109, 11/16/2024     -->
+  <!-- M08, Making a pretty list.          -->
+    <title>JavaScript &amp; jQuery - Chapter 5: Document Object Model - Add Element</title>
+    <link rel="stylesheet" href="css/c05.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul id="todo"><li id="one" class="hot"><em>fresh</em> figs</li><li id="two" class="hot">pine nuts</li><li id="three" class="hot">honey</li><li id="four">balsamic vinegar</li><li id="five">quinoa</li></ul>
+    </div>
 
+    <!-- Add class to add items to the list -->
+    <div class="addItem">
+      <input type="text" id="items" placeholder="Enter an item">
+      <button id="btn__AddElement" onclick="addItem();">Add an item</button>
+    </div>
+
+    <script src="js/add-element.js"></script>
+  </body>
+</html>

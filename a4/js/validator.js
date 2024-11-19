@@ -31,9 +31,9 @@ function validateLastName() {
     // regular expression to match only alphanumeric characters and spaces
     var re = /^[\w ]+$/;
     // validation fails if the input doesn't match our regular expression
-    if (!re.test(firstname)) {
-        alert("Error: Input contains invalid characters: " + firstname);
-        showError("FirstName", "Firstname contains invalid Characters.");
+    if (!re.test(lastname)) {
+        alert("Error: Input contains invalid characters: " + lastname);
+        showError("LastName", "lastname contains invalid Characters.");
         return false;
     }
     // validation was success
@@ -54,6 +54,9 @@ function validateEmail() {
 }
 
 // PhoneNumber VALIDATION //////////////////////////////////////////////////////
+// What I really want is to pull in the input, strip out all the non numeric
+// characters, and then format it the way I want for 10 digits, 11 if it has a 
+// leading "1", and then redisplay it correctly. BUT, not now. 
 var numbers = /^[0-9]+$/;
 function validatePhone() {
     var phone = document.getElementById("Phone").value;
@@ -71,22 +74,53 @@ function validateUsername() {
     var username = document.getElementById("Username").value;
 
     if (!username || username == "null" || username == "" || username.length > 12) {
-        showError("Username", "Username is required and cannot be greater than 12 characters");
+        showError("Username", "Username is required and must be less than 12 characters");
         return false;
     }
     return true;
 }
 
 // Password VALIDATION /////////////////////////////////////////////////////////
+// Required. Maximum 7 characters. I challenge you to require 1 UPPER, 1 lower, 
+// 1 number, and 1 special character. (1 extra credit point)
 function validatePassword() {
     var password = document.getElementById("Password").value;
+    var l_message = "";
 
+    // Requirement 1, required, and len > 7
     if (!password || password == "null" || password == "" || password.length > 7) {
-        showError("Password", "Password is required and cannot be greater than 7 characters");
+        l_message += "Password is required and cannot be greater than 7 characters.<br>";
+    }
+
+    // 2) Upper case test
+    if (!/[A-Z]/.test(password)) {
+        l_message += "Password must contain at least one uppercase letter.<br>";
+    }
+
+    // 3) lower csae test
+    if (!/[a-z]/.test(password)) {
+        l_message += "Password must contain at least one lowercase letter.<br>";
+    }
+
+    // 4) numeric test
+    if (!/[0-9]/.test(password)) {
+        l_message += "Password must contain at least one digit.<br>";
+    }
+
+    // 5) top row special characters
+    if (!/[\!\@\#\$\%\^\&\*\(\)\_\+\-\=]/.test(password)) {
+        l_message += "Password must contain at least one of these special charcters: !@#$%^&*()_+-=<br>";
+    }
+
+    // If there are errors, show them and return false
+    if (l_message) {
+        showError("Password", l_message);
         return false;
     }
+
     return true;
 }
+
 
 // Address VALIDATION //////////////////////////////////////////////////////////
 function validateAddress() {
@@ -117,7 +151,7 @@ function toggleUSAFields() {
     // If the selected country is "USA", enable the ZipCode field
     // Otherwise, disable and blank the fields
     var zipCodeField = document.getElementById('ZipCode');
-    var stateDropdown = document.getElementById('state-dropdown');
+    var stateDropdown = document.getElementById('State');
 
     if (country === "USA") {
         // Enable the fields
@@ -135,21 +169,21 @@ function toggleUSAFields() {
 }
 
 function validateZipCode() {
-    var zipcode = document.getElementById("Zipcode").value;
+    var zipcode = document.getElementById("ZipCode").value;
     var country = document.getElementById("Country").value;
 
-    if (country == "USA") {
-        if (zipcode.length > 5 || !zipcode || zipcode == "null" || zipcode == "") {
-            showError("Zipcode", "Required. Max length for Zipcode is 5");
+    if (country === "USA") {
+        if (!zipcode || zipcode.length > 5) {
+            showError("ZipCode", "Required. And Max length of 5");
             return false;
         }
-        else {
-            return true;
+        if (!/^\d+$/.test(zipcode)) {
+            showError("ZipCode", "Zip Code must contain only numeric values.");
+            return false;
         }
     }
-    else {
-        return true;
-    }
+    // if it isn't the USA, or if it made it to this point, it's valid.
+    return true;
 }
 
 
@@ -165,7 +199,22 @@ function validateCountry() {
 
 }
 
+// State VALIDATION ////////////////////////////////////////////////////////////
+// problem is that if the country is not USA, then the state can be blank.
+function validateState() {
+    var state = document.getElementById("State").value;
+    var country = document.getElementById("Country").value;
 
+//    alert(" the state is " + state )
+    if (!state || state == "null" || state == "") {
+        if(country === "USA") {
+            showError("State", "State is required");
+            return false;
+        }
+    }
+    return true;
+
+}
 // Display Errors //////////////////////////////////////////////////////////////
 function showError(element_id, message) {
     var element = document.getElementById(element_id);
@@ -250,7 +299,7 @@ const states = [
 // This builds HTML for each state in const states and injects it into
 // my dropdown list.
 function populateStates() {
-    const selectElement = document.getElementById("state-dropdown");
+    const selectElement = document.getElementById("State");
     states.forEach(state => {
         const option = document.createElement("option");
         option.value = state.code;
@@ -267,7 +316,7 @@ populateStates();
 // ALL VALIDATION //////////////////////////////////////////////////////////////
 function validateForm(event) {
     removeErrorMessages();
-    if (validateFirstName()
+    if (validateUsername()
         // && validateFirstName() // rt.rt testing purposes
         && validateLastName()
         && validateEmail()
@@ -277,6 +326,7 @@ function validateForm(event) {
         && validateAddress()
         && validateCity()
         && validateCountry()
+        && validateState()
         && validateZipCode()
     ) {
         return true;

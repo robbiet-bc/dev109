@@ -10,6 +10,10 @@ Bellevue College Fall 2024<br>
 <li>Module 3: <a href="https://robbiet-bc.github.io/dev109/m03/index.html" target="_blank">CSS, Cottage Garden</a></li>
 <li>Module 4: <a href="https://robbiet-bc.github.io/dev109/m04/index.html" target="_blank">Liquid layout - greens</a></li>
 <li>Module 5: <a href="https://robbiet-bc.github.io/dev109/m05/index.html" target="_blank">Bullseye Math - user input</a></li>
-<li>Artifact 3: <a href="https://robbiet-bc.github.io/dev109/a3/index.html" target="_blank">Rhombus Generator</a></li>
-<li>Module 7: <a href="https://robbiet-bc.github.io/dev109/m07/index.html" target="_blank">JS Objects - Hotel Availability</a></li>
+<li>Artifact 3: <a href="https://robbiet-bc.github.io/dev109/a3/index.html" target="_blank">Rhombus Generator - input, js</a></li>
+<li>Midterm: <a href="https://robbiet-bc.github.io/dev109/midterm/index.html" target="_blank">Midterm</a></li>
+<li>Module 7: <a href="https://robbiet-bc.github.io/dev109/m07/index.html" target="_blank">Hotel Availability, js</a></li>
+<li>Artifact 4: <a href="https://robbiet-bc.github.io/dev109/a4/index.html" target="_blank">Validate User Form</a></li>
+<li>Artifact 5: <a href="https://robbiet-bc.github.io/dev109/a5/index.html" target="_blank">Slideshow Using Javascript</a></li>
+<li>Module 8: <a href="https://robbiet-bc.github.io/dev109/m08/index.html" target="_blank">Grocery List, js</a></li>
 </UL>

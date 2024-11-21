@@ -1,0 +1,101 @@
+/************************************************************************/
+/* Rob Taylor, DEV 109            11/19/2024               Artifact 05  */
+/************************************************************************/
+/*                            Main CSS including                        */
+/************************************************************************/
+body {
+  font-family: 'DancingScriptRegular'; 
+  margin: 0;
+  padding: 0;
+  background-color: #e6f2d4; 
+  color: #2c3e50; 
+}
+
+.myDescs {
+  font-family: 'DancingScriptRegular'; 
+  font-size: 1.2rem;
+  color: white;
+
+  position: absolute;
+  top: 2%; /* set to top b/c too much of the food was hidden */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  background-color: rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 4pt;
+  padding: 10px;
+  z-index: 10;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  width: 400px;
+  height: 400px; 
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carouselImages {
+  display: flex;
+}
+
+.mySlides {
+  width: 100%;
+  height: auto;
+}
+
+.carouselButton {
+  position: absolute;
+  bottom: 2%; /* buttons on the bottom */
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.25); /* Semi-transparent black */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#btnLeft {
+  left:1px
+}
+#btnRight {
+  right:1px
+}
+
+#setIntervalButton{
+  background-color: rgba(0, 0, 0, 0.25); /* Semi-transparent black */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#setIntervalButton:hover{
+  /* it is unclear to me why buton:hover didn't pick this up. I had */
+  /* to create this to get the same effect */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+#intervalControls {
+  background-color: #5a8e3e;    /* Forest green */
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10px;
+}
+
+/* END Carousel Styles */

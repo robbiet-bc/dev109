@@ -1,0 +1,41 @@
+/************************************************************************/
+/* Rob Taylor, DEV 109            11/21/2024               Module 09    */
+/************************************************************************/
+/*                            Main CSS including                        */
+/************************************************************************/
+body {
+  height: 100%;
+  background: beige;
+  font-family: 'DancingScriptRegular';
+  margin: 0;
+  padding: 0;
+  color: darkblue;
+  overflow: hidden; /* no scrollbars */
+}
+
+.dot, .square {
+  position: absolute;
+}
+
+.dot {
+  border-radius: 50%; /* Fully round for circles */
+}
+
+.square {
+  border-radius: 0%; /* No rounding for squares */
+}
+
+#container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  background: white;
+  height: 600px; /* Set a fixed height for clarity */
+}
+
+#footer {
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+}

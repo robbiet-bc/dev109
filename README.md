@@ -16,4 +16,6 @@ Bellevue College Fall 2024<br>
 <li>Artifact 4: <a href="https://robbiet-bc.github.io/dev109/a4/index.html" target="_blank">Validate User Form</a></li>
 <li>Artifact 5: <a href="https://robbiet-bc.github.io/dev109/a5/index.html" target="_blank">Slideshow Using Javascript</a></li>
 <li>Module 8: <a href="https://robbiet-bc.github.io/dev109/m08/index.html" target="_blank">Grocery List, js</a></li>
+<li>Module 9: <a href="https://robbiet-bc.github.io/dev109/m09/index.html" target="_blank">Circles & Squares, Propogation</a></li>
+<li>Final: <a href="https://robbiet-bc.github.io/dev109/final/index.html" target="_blank">Final</a></li>
 </UL>

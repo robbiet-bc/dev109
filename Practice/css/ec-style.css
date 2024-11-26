@@ -1,0 +1,54 @@
+/************************************************************************/
+/* Rob Taylor, DEV 109            11/25/2024               Extra Credit */
+/************************************************************************/
+/*                            Main CSS I SPY GAME                       */
+/************************************************************************/
+body {
+  font-family: 'DancingScriptRegular';
+  margin: 0;
+  padding: 0;
+  background-color: #e6f2d4;
+  color: #2c3e50;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#gameContainer {
+  position: relative;
+  margin: 20px auto;
+  width: auto;
+  max-width: 800px; 
+  aspect-ratio: 4 / 3; /* Matches the aspect ratio of the image */
+  /* background-image: url('/Practice/images/I-spy-free-printable.png.webp') ... Having issues getting this to load properly */
+  background-image: url('https://highchairchronicles.com/wp-content/uploads/2020/05/I-spy-free-printable.png.webp');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#gameContainer img {
+  display: block;
+  max-width: 100%; /* Allow resizing, but maintain the aspect ratio */
+  height: auto;    /* Ensure height scales with width proportionally */
+  margin: 0 auto;  /* Center the image */
+}
+
+/* Temporary border for testing. Coordinates provided didn't work. */
+#gameContainer a {
+  /* border: 1px solid red; */
+}
+
+a {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+}

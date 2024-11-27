@@ -1,4 +1,4 @@
-if (window.location.pathname.endsWith("validated.html")) {
+if (window.location.pathname.endsWith("contact.html")) {
   document.getElementById("myContact").addEventListener("submit", validateForm);
 }
 

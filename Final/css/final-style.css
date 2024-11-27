@@ -93,7 +93,7 @@ main {                            /* Main Section */
 }
 
 #content {                        /* required background image */
-  background-image: url("/Final/images/soft-greens.png"); 
+  background-image: url("../images/soft-greens.png"); 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 

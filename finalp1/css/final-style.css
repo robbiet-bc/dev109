@@ -1,0 +1,604 @@
+/************************************************************************/
+/* Rob Taylor, DEV 109            11/26/2024                   Final    */
+/************************************************************************/
+/*               Main CSS including Headers & Navigation                */
+/************************************************************************/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f2d4; /* Light green background */
+  color: #2c3e50; /* Darker text for readability */
+}
+
+header {
+  background-color: #5a8e3e; /* Forest green */
+  color: white;
+  padding: 20px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between logo and nav */
+}
+
+h1 {
+  font-family: 'DancingScriptRegular'; 
+  font-size: 50px;
+  color: #435B9A;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.validated {
+  width: 100px; 
+  height: auto;
+  margin-left: auto; /* Pushes validated image to the far right */
+}
+
+/* rt.01 add pulsing effect to highlight the Validation page */
+#highlight-image {
+  animation: pulse 5.25s 1; /* Pulse effect for the validation page */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+nav {
+  flex-grow: 1;                   /* Instead of right justified, centered, like a banner */
+  text-align: center;
+  font-family: 'DancingScriptRegular'; 
+  font-size: 25px;
+  background-color: #435B9A;
+}
+
+nav ul {
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;                /* no bullets, row */
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {               /* links on Hover! */
+  text-decoration: underline;
+  color: #162310; 
+  background-color: #9CBB8B;
+  border-radius: 4px;
+}
+
+main {                            /* Main Section */
+  padding: 20px;
+  border-radius: 8px;   
+}
+
+#content {                        /* required background image */
+  background-image: url("../images/soft-greens.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+#creative-content {                /* moving background image */
+  background-image: url("../images/smoked-bamboo.webp"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color:#182711;
+}
+#growDeepHeader h1 {
+  font-family: 'DancingScriptRegular'; 
+  font-size: 50px;
+  color: #182711;
+}
+
+.text-column {
+  background-color: rgba(255, 255, 255, 0.7); /* Light background with transparency */
+  padding: 20px; /* Adds space around the text */
+  border-radius: 10px; /* Optional: Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for contrast */
+}
+
+/************************************************************************/
+/*                           Footer CSS                                 */
+/************************************************************************/
+footer {
+  background-color: #5a8e3e; /* Forest green */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Container for footer content */
+#footer-content {
+  position: relative;
+}
+
+/* Tree image container styles */
+#tree-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+#tree-image {
+  max-width: 100px;
+  border-radius: 8px;
+}
+
+#grow-deep-text { /* I want text over the tree image. So it pops with shadow */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f9f9f9;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding-top: 5px;
+}
+
+/* Validator and copyright positioning */
+#copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+  color: #3D382D;
+}
+
+#validators {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  color: #3D382D;
+}
+
+/************************************************************************/
+/*                      Creative/Grow Deep CSS                          */
+/************************************************************************/
+.grow-deep-container {      /* arrage in 3 columns */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.grow-deep-frame {
+  padding: 10px;
+  border: 2px solid #435B9A;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.grow-deep-video-column iframe {
+  width: 150%;
+  height:100%;
+  border-radius: 5px;
+}
+
+.grow-deep-video-column iframe:hover {
+  border-color: #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.grow-deep-image-columns img {
+  border: 2px solid transparent;
+  opacity: 0.9;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  width: 100%;
+  vertical-align:50%;
+  border-radius: 5px;
+}
+
+.grow-deep-image-column img {
+  border: 2px solid transparent;
+  opacity: 0.9;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  width: 100%;
+  vertical-align: 50%;
+  border-radius: 5px;
+}
+
+.grow-deep-image-column img:hover {
+  border-color: #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+#haiku {
+  font-family: 'AmburegulRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bamboo Images */
+.bamboo {
+  position: absolute;
+  width: 150px;
+  height:auto;
+  top: 0;
+  height: 100%;
+  opacity: 0.7; 
+  pointer-events: none; /* Ensures they don’t interfere with clicks */
+}
+
+.bamboo-left {
+  left: 0;
+  transform-origin: right bottom; /* Anchor point for sway */
+  animation: sway 7.2s infinite alternate ease-in-out; /* out of sync */
+}
+
+.bamboo-right {
+  right: 0;
+  transform-origin: left bottom;
+  animation: sway 5.4s infinite alternate ease-in-out;
+}
+
+/* Sway image animation */
+@keyframes sway {
+  from {
+      transform: rotate(-3deg);
+  }
+  to {
+      transform: rotate(3deg);
+  }
+}
+
+
+/************************************************************************/
+/*                          Coursework CSS                              */
+/************************************************************************/
+/* Timeline Container */
+#timeline {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Entries */
+.timeline-entry {
+  margin: 20px 0;
+  padding: 10px 15px;
+  border-left: 4px solid #5a8e3e;
+  background: #eef6ee;
+  border-radius: 4px;
+  position: relative;
+}
+
+.timeline-entry h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 0 0 10px;
+}
+
+.timeline-entry p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Highlighting the iframe */
+.timeline-entry iframe {
+  display: block;
+  margin: 15px auto;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  max-width: 100%;
+}
+
+/* Subtle Hover Effect */
+.timeline-entry:hover {
+  background: #dff0df;
+}
+
+.timeline-entry img:hover {
+  border-color: #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .timeline-entry h2 {
+    font-size: 1.5rem;
+  }
+
+  .timeline-entry p {
+    font-size: 0.9rem;
+  }
+}
+
+
+.styled-table {
+  width: 100%;
+}
+
+.styled-table th, 
+.styled-table td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Header styling */
+.styled-table thead th {
+  background-color: #162310;
+  color: white;
+}
+
+/* Row colors */
+.styled-table tbody tr:nth-child(odd) {
+  background-color: #CEDDC5;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #9CBB8B;
+}
+
+/* Column width styling */
+.styled-table th:nth-child(1), .styled-table td:nth-child(1) {
+  width: 100px;
+}
+
+.styled-table th:nth-child(2), .styled-table td:nth-child(2) {
+  width: 60px;
+}
+
+/* Repeat width styling for remaining columns */
+.styled-table th:nth-child(3), .styled-table td:nth-child(3),
+.styled-table th:nth-child(5), .styled-table td:nth-child(5),
+.styled-table th:nth-child(7), .styled-table td:nth-child(7),
+.styled-table th:nth-child(9), .styled-table td:nth-child(9),
+.styled-table th:nth-child(11), .styled-table td:nth-child(11) {
+  width: 100px;
+}
+
+.styled-table th:nth-child(4), .styled-table td:nth-child(4),
+.styled-table th:nth-child(6), .styled-table td:nth-child(6),
+.styled-table th:nth-child(8), .styled-table td:nth-child(8),
+.styled-table th:nth-child(10), .styled-table td:nth-child(10),
+.styled-table th:nth-child(12), .styled-table td:nth-child(12) {
+  width: 60px;
+}
+
+/************************************************************************/
+/*                           Artifacts CSS                              */
+/************************************************************************/
+/* Artifact Section */
+#artifacts {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artifact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.artifact-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artifact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.artifact-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.artifact-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.artifact-card p {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0 10px 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .artifact-card img {
+    height: 100px;
+  }
+
+  .artifact-card h3 {
+    font-size: 1rem;
+  }
+
+  .artifact-card p {
+    font-size: 0.8rem;
+  }
+}
+
+/* formatting for my picture Grids */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 10px; /* gap between images */
+  width: 100%;
+  max-width: 960px; /* 3 columns x 300px + gaps */
+  margin: 0 auto; /* Center the grid on the page */
+}
+
+.grid-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop images to fit exactly in 300x300px */
+  max-width: 300px;
+  max-height: 300px;
+}
+
+/************************************************************************/
+/*                           Contact CSS                                */
+/************************************************************************/
+.content-contact {                            /* Put it all in a box */
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #9CBB8B;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* pop with shadow */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form p {
+  margin-bottom: .5px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input, select {
+  padding: 5px;
+  margin-top: 1px;
+  width: 95%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+/************************************************************************/
+/*                       Validation Page CSS                            */
+/************************************************************************/
+/* Ensure the container spans the full width and sets up a flexbox layout */
+.validator-container {
+  display: flex; /* This will create a flexbox container */
+  justify-content: space-between; /* Space out the columns */
+  gap: 20px; /* Adds space between the columns */
+  margin-top: 20px;
+}
+
+/* Style for each column (left and right) */
+.validator-column {
+  width: 48%; /* Each column takes up 48% of the container width */
+}
+
+/* Style for the header in each column */
+.validator-column h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Screenshot styling */
+.screenshot {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.screenshot img {
+  max-width: 100%; /* Ensures the images are responsive */
+  height: auto;
+}
+
+/* Input and textarea styling */
+.content-contact input[type="text"],
+.content-contact input[type="email"],
+.content-contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Placeholder color */
+.content-contact input::placeholder,
+.content-contact textarea::placeholder {
+  color: #75787a;
+  font-family: Arial, sans-serif; /* don't know why this didn't stick for textarea */
+}
+
+#submit-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 1rem;
+  background-color: #435B9A;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+  background-color: #2c3e70; /* Darker shade on hover for #435B9A */
+}

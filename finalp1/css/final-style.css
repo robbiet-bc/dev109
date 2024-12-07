@@ -14,10 +14,12 @@ body {
 header {
   background-color: #5a8e3e; /* Forest green */
   color: white;
-  padding: 20px;
+  padding: 10px;
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
   justify-content: space-between; /* Space between logo and nav */
+  width: auto;
+  border-radius: 16px;
 }
 
 h1 {
@@ -126,11 +128,11 @@ footer {
   background-color: #5a8e3e; /* Forest green */
   color: white;
   text-align: center;
-  padding: 20px;
+  padding:0px;
   position: relative;
   bottom: 0;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 /* Container for footer content */
@@ -275,8 +277,8 @@ footer {
 /************************************************************************/
 /*                          Coursework CSS                              */
 /************************************************************************/
-/* Timeline Container */
-#timeline {
+/* greenbox Container */
+#greenbox {
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
@@ -287,7 +289,7 @@ footer {
 }
 
 /* Entries */
-.timeline-entry {
+.greenbox-entry {
   margin: 20px 0;
   padding: 10px 15px;
   border-left: 4px solid #5a8e3e;
@@ -296,19 +298,19 @@ footer {
   position: relative;
 }
 
-.timeline-entry h2 {
+.greenbox-entry h2 {
   font-size: 1.8rem;
   color: #2c3e50;
   margin: 0 0 10px;
 }
 
-.timeline-entry p {
+.greenbox-entry p {
   font-size: 1rem;
   margin: 0;
 }
 
 /* Highlighting the iframe */
-.timeline-entry iframe {
+.greenbox-entry iframe {
   display: block;
   margin: 15px auto;
   border-radius: 8px;
@@ -317,11 +319,11 @@ footer {
 }
 
 /* Subtle Hover Effect */
-.timeline-entry:hover {
+.greenbox-entry:hover {
   background: #dff0df;
 }
 
-.timeline-entry img:hover {
+.greenbox-entry img:hover {
   border-color: #ccc;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   opacity: 1;
@@ -334,11 +336,11 @@ footer {
     font-size: 1.8rem;
   }
 
-  .timeline-entry h2 {
+  .greenbox-entry h2 {
     font-size: 1.5rem;
   }
 
-  .timeline-entry p {
+  .greenbox-entry p {
     font-size: 0.9rem;
   }
 }
@@ -397,7 +399,7 @@ footer {
 }
 
 /************************************************************************/
-/*                           Artifacts CSS                              */
+/*                      Artifacts & Modules CSS                         */
 /************************************************************************/
 /* Artifact Section */
 #artifacts {

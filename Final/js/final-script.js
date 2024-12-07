@@ -35,6 +35,17 @@ function validateEmail() {
     return true;
 }
 
+// message VALIDATION //////////////////////////////////////////////////////////
+function validatemessage() {
+    var message = document.getElementById("message").value;
+
+    if (!message || message == "null" || message == "" || message.length <= 1) {
+        showError("message", "Message is required and should have context.");
+        return false;
+    }
+    return true;
+}
+
 // subject VALIDATION /////////////////////////////////////////////////////////
 function validatesubject() {
     var subject = document.getElementById("subject").value;
@@ -77,6 +88,7 @@ function validateForm(event) {
         // && validatefullName() // rt.rt testing purposes
         && validateEmail()
         && validatesubject()
+        && validatemessage()
     ) {
         return true;
     }
@@ -85,3 +97,24 @@ function validateForm(event) {
         return false;
     }
 };
+
+// Document Headers for all web pages. /////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+    });
+});
+
+
+// lower default audio volume for creative page ////////////////////////////////
+document.addEventListener("DOMContentLoaded", () => {
+    // Check if the current page is creative.html
+    if (window.location.pathname.endsWith("creative.html")) {
+        const audio = document.querySelector('audio');
+        if (audio) {
+            audio.volume = 0.6; // Set volume to 60%
+        }
+    }
+});

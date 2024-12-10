@@ -9,7 +9,9 @@ function validateFirstName() {
     }
 
     // regular expression to match only alphanumeric characters and spaces
-    var re = /^[\w ]+$/;
+    // rt.rt Don't allow digits
+    var re = /^[A-Za-z\s]+$/;
+
     // validation fails if the input doesn't match our regular expression
     if (!re.test(firstname)) {
         alert("Error: Input contains invalid characters: " + firstname);
@@ -29,7 +31,9 @@ function validateLastName() {
         return false;
     }
     // regular expression to match only alphanumeric characters and spaces
-    var re = /^[\w ]+$/;
+    // rt.rt Don't allow digits, one could argue for CR7 or RG3, but ... 
+    var re = /^[A-Za-z\s]+$/;
+
     // validation fails if the input doesn't match our regular expression
     if (!re.test(lastname)) {
         alert("Error: Input contains invalid characters: " + lastname);
@@ -220,7 +224,7 @@ function showError(element_id, message) {
     var element = document.getElementById(element_id);
     var error_div = document.createElement('div');
     error_div.id = element_id + '_error';
-    error_div.className = 'error';
+    error_div.className = 'errorMessages';
     error_div.innerHTML = message;
     element.parentNode.insertBefore(error_div, element.nextSibling);
 
@@ -236,7 +240,7 @@ function removeElementsByClass(rootElement, className) {
 
 // Clear Errors on Submit  /////////////////////////////////////////////////////
 function removeErrorMessages() {
-    removeElementsByClass(document.getElementById('myform'), 'error');
+    removeElementsByClass(document.getElementById('myform'), 'errorMessages');
 }
 
 
@@ -316,7 +320,7 @@ populateStates();
 // ALL VALIDATION //////////////////////////////////////////////////////////////
 function validateForm(event) {
     removeErrorMessages();
-    if (validateUsername()
+    if (validateFirstName()
         // && validateFirstName() // rt.rt testing purposes
         && validateLastName()
         && validateEmail()

@@ -76,7 +76,15 @@ form input[type="submit"]:hover {
     color: brown;
 }
 
-#errorMessages {
+.errorMes {
     color: red;
+    font-weight: bold;  /* Bold text */
 }
-
+.errorMessages {
+    color: red;
+    font-weight: bold;  /* rt.rt Bold text */
+    background-color: #f8d7da;  /* it looked crappy on green */
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;  /* Some space above the error message */
+}
